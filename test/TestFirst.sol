@@ -3,12 +3,12 @@ import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/First.sol";
 
-contract Test_First {
+contract Test_State_Variables {
 
-    function test_getAge1() public {
-        First meta = First.DeployedAddresses.First());
-        meta.getAge1(); //instance of my getAge function
-        Assert.equal(meta.getAge1(), 10 , "Age is equals to 10" );
+    function test_getAge() public {
+        State_Variables meta = State_Variables(DeployedAddresses.State_Variables());
+        int a = meta.age2; //instance of my getAge function
+        //Assert.equal(meta.getAge2(), 20 , "Age is equals to 10" );
 
 
     }
